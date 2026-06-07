@@ -5,3 +5,5 @@ for (let i = 0; i < 256; i++) {
 div.addEventListener("mouseover", function() {
     div.style.backgroundColor = "black";
 });
+
+let size = prompt("Enter grid size (max 100):");
