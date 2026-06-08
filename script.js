@@ -1,5 +1,5 @@
 const container = document.querySelector("#container");
-const resertButton = document.querySelector("#reset");
+const resetButton = document.querySelector("#resetBtn");
 
 function createGrid(size) {
     container.innerHTML = "";
@@ -9,8 +9,8 @@ function createGrid(size) {
         const square = document.createElement("div");
         square.classList.add("grid-square");
 
-        square.style.width = `${squareSize} px`;
-        square.style.height = `${squareSize} px`;
+        square.style.width = `${squareSize}px`;
+        square.style.height = `${squareSize}px`;
 
         square.addEventListener("mouseover", () => {
         square.style.backgroundColor = "black";
@@ -20,7 +20,7 @@ function createGrid(size) {
     }
 }
 
-resertButton.addEventListener("click", () => {
+resetButton.addEventListener("click", () => {
     let newSize = prompt("Enter new grid size (max 100):");
     
     if (isNaN(newSize) || newSize <= 0) {
@@ -28,17 +28,9 @@ resertButton.addEventListener("click", () => {
         return;
     }
 
-    if (newSize > 100) size = 100;
+    if (newSize > 100) newSize = 100;
 
-    createGrid(size);
+    createGrid(16);
 });
 
-
-
-let size = prompt("Enter grid size (max 100):");
-
-for (let i = 0; i < 256; i++) {
-    const square = document.createElement("div");
-    container.appendChild(square);
-}
 
