@@ -11,14 +11,15 @@ function createGrid(size) {
         square.style.height = squareSize + "px";
         square.style.float = "left";
         square.style.border = "1px solid #ccc";
+        square.addEventListener("mouseover", function() {
+        square.style.backgroundColor = "black";
+});
         container.appendChild(square);
 }
 
 createGrid(16);
 
-square.addEventListener("mouseover", function() {
-    square.style.backgroundColor = "black";
-});
+
 
 let size = prompt("Enter grid size (max 100):");
 
