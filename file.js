@@ -1,7 +1,10 @@
 const container = document.querySelector("#container");
-const square = document.createElement("div");
 
-container.appendChild(square);
+function createGrid(size) {
+    container.innerHTML = "";
+}
+
+createGrid(16);
 
 square.addEventListener("mouseover", function() {
     square.style.backgroundColor = "black";
@@ -13,3 +16,4 @@ for (let i = 0; i < 256; i++) {
     const square = document.createElement("div");
     container.appendChild(square);
 }
+
